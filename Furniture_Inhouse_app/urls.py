@@ -22,6 +22,11 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('users/',include('users.urls')),
     path('category/',include('category.urls')),
-    path("subcategory/",include('subcategory.urls'))
+    path("subcategory/",include('subcategory.urls')),
+    path("material/", include("material.urls")),
+    path("product/", include("product.urls")),
+    path("prodinward/", include("prodinward.urls")),
+    path("inward_purchase/",include("inward_purchase.urls"))
+
 
 ]

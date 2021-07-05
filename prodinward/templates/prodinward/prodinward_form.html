@@ -1,0 +1,122 @@
+{%  load crispy_forms_field %}
+{% comment %}<div class="card card-success">
+              <div class="card-header">
+                <h3 class="card-title">products entry form </h3>
+              </div>
+              <!-- /.card-header -->
+              <!-- form start -->
+              <form action="{% url 'prodinward-new' %}" id="quickForm" method="post">
+                  {% csrf_token %}
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col">
+                  <div class="form-group">
+                    <label for="name">Product Name </label>
+                    {% crispy_field iform.prod  %}
+                  </div></div>
+                            <div class="col">
+                                  <div class="form-group">
+                                    <label for="description">Quantity </label>
+                                    {% crispy_field iform.quantity %}
+                                  </div></div></div>
+                            <div class="row">
+                            <div class="col">
+                    <div class="form-group">
+                    <label for="description">Rate </label>
+                    {% crispy_field iform.rate %}
+                    </div></div>
+                    <div class="col">
+                    <div class="form-group">
+                    <label for="description">Price </label>
+                    {% crispy_field iform.price %}
+                    </div></div>
+                        <div class="col">
+                    <div class="form-group">
+                    <label for="description">Discount </label>
+                    {% crispy_field iform.discount %}
+                    </div></div>
+                        <div class="col">
+                    <div class="form-group">
+                    <label for="description">GST </label>
+                    {% crispy_field iform.gst %}
+                  </div>
+                        </div></div>
+
+
+
+
+                </div>
+                <!-- /.card-body -->
+                <div class="card-footer">
+                  <button type="submit" class="btn btn-primary">Submit</button>
+                </div>
+              </form>
+            </div>{% endcomment %}
+
+
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">Add Product</button>
+
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">New message</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+         <form action="{% url 'prodinward-new' %}" id="quickForm" method="post">
+                  {% csrf_token %}
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col">
+                  <div class="form-group">
+                    <label for="name">Product Name </label>
+                    {% crispy_field iform.prod  %}
+                  </div></div>
+                            <div class="col">
+                                  <div class="form-group">
+                                    <label for="description">Quantity </label>
+                                    {% crispy_field iform.quantity %}
+                                  </div></div></div>
+                            <div class="row">
+                            <div class="col">
+                    <div class="form-group">
+                    <label for="description">Rate </label>
+                    {% crispy_field iform.rate %}
+                    </div></div>
+                    <div class="col">
+                    <div class="form-group">
+                    <label for="description">Price </label>
+                    {% crispy_field iform.price %}
+                    </div></div>
+                        <div class="col">
+                    <div class="form-group">
+                    <label for="description">Discount </label>
+                    {% crispy_field iform.discount %}
+                    </div></div>
+                        <div class="col">
+                    <div class="form-group">
+                    <label for="description">GST </label>
+                    {% crispy_field iform.gst %}
+                  </div>
+                        </div></div>
+
+
+
+
+                </div>
+                <!-- /.card-body -->
+                <div class="card-footer">
+                  <button type="submit" class="btn btn-primary">Submit</button>
+                </div>
+              </form>
+      </div>
+     {% comment %} <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Send message</button>
+      </div>{% endcomment %}
+    </div>
+  </div>
+</div>

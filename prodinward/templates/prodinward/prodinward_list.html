@@ -1,0 +1,51 @@
+<table id="example1" class="table table-bordered table-striped">
+                  <thead>
+                  <tr>
+                    <th>ID</th>
+                    <th>Product Name</th>
+                    <th>Quantity</th>
+                      <th>Rate</th>
+                      <th>Price</th>
+                      <th>Discount</th>
+                      <th>GST</th>
+                    <th>Action</th>
+                  </tr>
+                  </thead>
+                  <tbody>
+                   {% for mat in products %}
+                       <tr>
+                       <td> {{ mat.id }}</td>
+                       <td>{{ mat.prod.name }}</td>
+                       <td>{{ mat.quantity}}</td>
+                           <td>{{ mat.rate }}</td>
+                           <td>{{ mat.price }}</td>
+                           <td>{{ mat.discount }}</td>
+                           <td>{{ mat.gst }}</td>
+                       <td><a class="btn btn-info btn-sm" href="{% url 'prodinward-update' mat.id %}">
+                              <i class="fas fa-pencil-alt">
+                              </i>
+                              Edit
+                          </a>
+                        <a class="btn btn-danger btn-sm" href="{% url 'prodinward-delete' mat.id %}">
+                              <i class="fas fa-trash">
+                              </i>
+                              Delete
+                          </a>
+                       </td>
+
+                       </tr>
+                   {% endfor %}
+                  </tbody>
+                  <tfoot>
+                  <tr>
+                   <th>ID</th>
+                    <th>Product Name</th>
+                    <th>Quantity</th>
+                      <th>Rate</th>
+                      <th>Price</th>
+                      <th>Discount</th>
+                      <th>GST</th>
+                    <th>Action</th>
+                  </tr>
+                  </tfoot>
+                </table>
