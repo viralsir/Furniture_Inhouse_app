@@ -14,6 +14,8 @@ class Updateproduct(UpdateView):
     model = prodinward
     fields = '__all__'
 
+
+
 class Deleteproduct(DeleteView):
     model = prodinward
     success_url = '/prodinward/view'

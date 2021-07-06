@@ -1,62 +1,9 @@
 {%  load crispy_forms_field %}
-{% comment %}<div class="card card-success">
-              <div class="card-header">
-                <h3 class="card-title">products entry form </h3>
-              </div>
-              <!-- /.card-header -->
-              <!-- form start -->
-              <form action="{% url 'prodinward-new' %}" id="quickForm" method="post">
-                  {% csrf_token %}
-                <div class="card-body">
-                    <div class="row">
-                        <div class="col">
-                  <div class="form-group">
-                    <label for="name">Product Name </label>
-                    {% crispy_field iform.prod  %}
-                  </div></div>
-                            <div class="col">
-                                  <div class="form-group">
-                                    <label for="description">Quantity </label>
-                                    {% crispy_field iform.quantity %}
-                                  </div></div></div>
-                            <div class="row">
-                            <div class="col">
-                    <div class="form-group">
-                    <label for="description">Rate </label>
-                    {% crispy_field iform.rate %}
-                    </div></div>
-                    <div class="col">
-                    <div class="form-group">
-                    <label for="description">Price </label>
-                    {% crispy_field iform.price %}
-                    </div></div>
-                        <div class="col">
-                    <div class="form-group">
-                    <label for="description">Discount </label>
-                    {% crispy_field iform.discount %}
-                    </div></div>
-                        <div class="col">
-                    <div class="form-group">
-                    <label for="description">GST </label>
-                    {% crispy_field iform.gst %}
-                  </div>
-                        </div></div>
+  <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
 
 
 
-
-                </div>
-                <!-- /.card-body -->
-                <div class="card-footer">
-                  <button type="submit" class="btn btn-primary">Submit</button>
-                </div>
-              </form>
-            </div>{% endcomment %}
-
-
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">Add Product</button>
-
-<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
@@ -66,40 +13,40 @@
         </button>
       </div>
       <div class="modal-body">
-         <form action="{% url 'prodinward-new' %}" id="quickForm" method="post">
+         <form  id="quickForm" method="post">
                   {% csrf_token %}
                 <div class="card-body">
                     <div class="row">
                         <div class="col">
                   <div class="form-group">
-                    <label for="name">Product Name </label>
-                    {% crispy_field iform.prod  %}
+                    <label for="name">Product Name -{{ form.id }} </label>
+                    {% crispy_field form.prod  %}
                   </div></div>
                             <div class="col">
                                   <div class="form-group">
                                     <label for="description">Quantity </label>
-                                    {% crispy_field iform.quantity %}
+                                    {% crispy_field form.quantity %}
                                   </div></div></div>
                             <div class="row">
                             <div class="col">
                     <div class="form-group">
                     <label for="description">Rate </label>
-                    {% crispy_field iform.rate %}
+                    {% crispy_field form.rate %}
                     </div></div>
                     <div class="col">
                     <div class="form-group">
                     <label for="description">Price </label>
-                    {% crispy_field iform.price %}
+                    {% crispy_field form.price %}
                     </div></div>
                         <div class="col">
                     <div class="form-group">
                     <label for="description">Discount </label>
-                    {% crispy_field iform.discount %}
+                    {% crispy_field form.discount %}
                     </div></div>
                         <div class="col">
                     <div class="form-group">
                     <label for="description">GST </label>
-                    {% crispy_field iform.gst %}
+                    {% crispy_field form.gst %}
                   </div>
                         </div></div>
 
@@ -109,14 +56,14 @@
                 </div>
                 <!-- /.card-body -->
                 <div class="card-footer">
-                  <button type="submit" class="btn btn-primary">Submit</button>
+                  <button type="submit"  class="btn btn-primary">Submit</button>
                 </div>
               </form>
       </div>
-     {% comment %} <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Send message</button>
-      </div>{% endcomment %}
+
     </div>
   </div>
-</div>
+
+ <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>

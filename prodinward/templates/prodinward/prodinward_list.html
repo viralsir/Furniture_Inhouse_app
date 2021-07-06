@@ -21,7 +21,11 @@
                            <td>{{ mat.price }}</td>
                            <td>{{ mat.discount }}</td>
                            <td>{{ mat.gst }}</td>
-                       <td><a class="btn btn-info btn-sm" href="{% url 'prodinward-update' mat.id %}">
+                       <td>
+
+                           <a href="{% url 'prodinward-update' mat.id %}" onclick="return !window.open(this.href, 'product update', 'width=700,height=600')"
+    target="_blank">
+
                               <i class="fas fa-pencil-alt">
                               </i>
                               Edit

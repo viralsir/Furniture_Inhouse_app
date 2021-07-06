@@ -16,12 +16,15 @@ class inwardform(forms.ModelForm):
         fields='__all__'
 
 def new_bill(request):
-    products=prodinward.objects.all()
-    form=billform()
-    iform = inwardform()
+    products=prodinward.objects.filter(is_biiled=False).all()
+    iform=billform()
+    form = inwardform()
     return render(request,"inward_purchase/add_bill.html",{
         "products":products,
         "form":form,
         "iform":iform
 
     })
+
+def closewindow(request):
+    return render(request,"inward_purchase/close_window.html")

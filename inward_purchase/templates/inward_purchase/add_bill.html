@@ -37,12 +37,15 @@
                     <div class="col-4">
                             <div class="form-group">
                             <label for="name">Bill Date </label>
-                            {% crispy_field form.date  %}
+                            {% crispy_field iform.date  %}
                           </div>
                     </div>
                      <div class="col-8">
                            <div class="form-group">
-                            {% include "prodinward/prodinward_form.html" %}
+                                  <a href="{% url 'prodinward-new' %}" onclick="return !window.open(this.href, 'product update', 'width=700,height=600')"
+                                     target="_blank"> Add Product </a>
+
+
                           </div>
                      </div>
                  </div>
@@ -56,32 +59,32 @@
 
                                  <div class="form-group">
                                     <label for="description">total amount </label>
-                                    {% crispy_field form.total_amount %}
+                                    {% crispy_field iform.total_amount %}
                                   </div>
 
 
 
                                 <div class="form-group">
                                 <label for="description">GST </label>
-                                {% crispy_field form.gst %}
+                                {% crispy_field iform.gst %}
                         </div>
 
 
                         <div class="form-group">
                         <label for="description">Discount </label>
-                            {% crispy_field form.discount %}
+                            {% crispy_field iform.discount %}
                         </div>
 
 
                         <div class="form-group">
                         <label for="description">Net Amount </label>
-                        {% crispy_field form.net_amount %}
+                        {% crispy_field iform.net_amount %}
                         </div>
 
 
                             <div class="form-group">
                             <label for="description"> Due amount</label>
-                            {% crispy_field form.due_amount %}
+                            {% crispy_field iform.due_amount %}
                           </div>
 
 
