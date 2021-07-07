@@ -21,6 +21,13 @@
                   <div class="form-group">
                     <label for="name">Product Name -{{ form.id }} </label>
                     {% crispy_field form.prod  %}
+                      <div>
+                           {%  if form.prod.errors  %}
+                               {% for error in form.prod.errors %}
+                                   <span class="invalid-feedback"> {{  error }}</span>
+                               {% endfor %}
+                          {% endif %}
+                      </div>
                   </div></div>
                             <div class="col">
                                   <div class="form-group">

@@ -1,6 +1,7 @@
 from django.db import models
 from datetime import  datetime
 from prodinward.models import prodinward
+from django.urls import reverse
 
 # Create your models here.
 class inward_purchase(models.Model):
@@ -15,6 +16,7 @@ class inward_purchase(models.Model):
     def __str__(self):
         return f"{self.id} - {self.date}"
 
-
+    def get_absolute_url(self):
+        return reverse('view-purchase')
 
 

@@ -2,6 +2,7 @@ from django.urls import path
 from .views import *
 
 urlpatterns=[
-    path("new/",new_bill,name="new-purchase"),
-    path("closed/",closewindow,name="closed")
+    path("new/",NewInwardBill.as_view(),name="new-purchase"),
+    path("closed/",closewindow,name="closed"),
+    path("view/",ViewPurchaseBill.as_view(),name="view-purchase")
 ]

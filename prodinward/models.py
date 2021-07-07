@@ -10,6 +10,7 @@ class prodinward(models.Model):
     discount = models.FloatField(max_length=100, blank=True, null=True)
     gst = models.FloatField(max_length=100, blank=True, null=True)
     is_biiled=models.BooleanField(default=False)
+    billed=models.IntegerField(default=0)
 
     def __str__(self):
         return f"{self.price}"

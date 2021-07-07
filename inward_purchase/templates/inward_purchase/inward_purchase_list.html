@@ -2,25 +2,21 @@
                   <thead>
                   <tr>
                     <th>ID</th>
-                    <th>Product Name</th>
-                    <th>Quantity</th>
-                      <th>Rate</th>
-                      <th>Price</th>
-                      <th>Discount</th>
-                      <th>GST</th>
+                    <th>Date</th>
+                    <th>total amount</th>
+                    <th>Net Amount</th>
+
                     <th>Action</th>
                   </tr>
                   </thead>
                   <tbody>
-                   {% for mat in products %}
+                   {% for mat in bills %}
                        <tr>
                        <td> {{ mat.id }}</td>
-                       <td>{{ mat.prod.name }}</td>
-                       <td>{{ mat.quantity}}</td>
-                           <td>{{ mat.rate }}</td>
-                           <td>{{ mat.price }}</td>
-                           <td>{{ mat.discount }}</td>
-                           <td>{{ mat.gst }}</td>
+                       <td>{{ mat.date }}</td>
+                       <td>{{ mat.total_amount}}</td>
+                       <td>{{ mat.net_amount }}</td>
+
                        <td>
 
                            <a href="{% url 'prodinward-update' mat.id %}" onclick="return !window.open(this.href, 'product update', 'width=700,height=600')"
@@ -44,12 +40,10 @@
                   <tfoot>
                   <tr>
                    <th>ID</th>
-                    <th>Product Name</th>
-                    <th>Quantity</th>
-                      <th>Rate</th>
-                      <th>Price</th>
-                      <th>Discount</th>
-                      <th>GST</th>
+                    <th>Date</th>
+                    <th>total amount</th>
+                    <th>Net Amount</th>
+
                     <th>Action</th>
                   </tr>
                   </tfoot>
